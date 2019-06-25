@@ -1,27 +1,19 @@
+## Ejercicio 5 (2 puntos)
 
+**Obtenga sin utilizar el compilador de Solidity el identificador de cada una de las siguientes funciones y justifique cómo los ha obtenido. Muestre mediante un pantallazo la obtención de los identificadores.**
 
-web3.sha3('abr(uint8 _a, address _address) internal').substr(0,10)
+**- function sumValues (uint _a, uint _b) public view returns (uint _c) {}**
 
-- function sumValues (uint _a, uint _b) public view returns (uint _c) {}
-- function getGasDetails() public payable{}
-- function __callback(bytes32 id, string memory result) public{}
-- function abr(uint8 _a, address _address) internal{}
+` web3.sha3('sumValues (uint256, uint256) view returns (uint _c)').substr(0,10)
+"0x22606277"` 
+ 
+**- function getGasDetails() public payable{}**
+` web3.sha3 ('getGasDetails()').substr (0,10)
+"0x3d86f4af"` 
 
+**- function __callback(bytes32 id, string memory result) public{}**
+`web3.sha3 ('__callback(bytes32,string)').substr (0,10)
+"0x27dc297e"` 
 
-> web3.sha3('sumValues (uint256, uint256) view returns (uint _c)').substr(0,10)
-"0x22606277"
-> 
-
-> web3.sha3('getGasDetails() public payable').substr(0,10)
-"0xdedd409b"
-> 
-
-> web3.sha3('function __callback(bytes32 id, string memory result) public').substr(0,10)
-"0xce450f12"
-
-> web3.sha3('abr(uint8 _a, address _address) internal').substr(0,10)
-"0x8beaf4df"
-
-
-
-
+**- function jccb(uint8 _a, address _address) internal{}**
+Como función interna no tiene código
